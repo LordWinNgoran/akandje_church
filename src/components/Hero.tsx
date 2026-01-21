@@ -6,6 +6,8 @@ import { loadSlim } from '@tsparticles/slim';
 import type { Engine, ISourceOptions } from '@tsparticles/engine';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
+import akanImage from '../assets/akan.jpeg';
+import akandjeCoeurImage from '../assets/akandjecoeur.jpeg';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
@@ -103,6 +105,8 @@ export default function Hero({ onDonate }: HeroProps) {
       description: 'Une église qui allie tradition et modernité',
       gradient: 'from-blue-900/90 to-blue-700/90',
       icon: '🏛️',
+      image: akanImage,
+      imageAlt: 'Architecture contemporaine de l’église',
     },
     {
       title: 'Votre Héritage Spirituel',
@@ -110,6 +114,8 @@ export default function Hero({ onDonate }: HeroProps) {
       description: 'Chaque don construit un lieu de prière pour les générations futures',
       gradient: 'from-rose-900/90 to-rose-700/90',
       icon: '🙏',
+      image: akandjeCoeurImage,
+      imageAlt: 'Église Sacré-Cœur d’Akandjé',
     },
   ];
 
@@ -194,21 +200,30 @@ export default function Hero({ onDonate }: HeroProps) {
                     <div className="relative">
                       <div className="absolute inset-0 bg-white/10 backdrop-blur-3xl rounded-3xl transform rotate-6"></div>
                       <div className="relative bg-white/20 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden aspect-[4/3] border border-white/30">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="text-center p-8">
-                            <div className="text-9xl mb-6 animate-bounce-slow drop-shadow-2xl">
-                              {slide.icon}
-                            </div>
-                            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
-                              <p className="text-2xl font-bold text-gray-900 mb-2">
-                                {slide.subtitle}
-                              </p>
-                              <p className="text-gray-600">
-                               {/*  Visualisation 3D à venir */}
-                              </p>
+                        {slide.image ? (
+                          <img
+                            src={slide.image}
+                            alt={slide.imageAlt}
+                            className="absolute inset-0 h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="text-center p-8">
+                              <div className="text-9xl mb-6 animate-bounce-slow drop-shadow-2xl">
+                                {slide.icon}
+                              </div>
+                              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
+                                <p className="text-2xl font-bold text-gray-900 mb-2">
+                                  {slide.subtitle}
+                                </p>
+                                <p className="text-gray-600">
+                                 {/*  Visualisation 3D à venir */}
+                                </p>
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        )}
                       </div>
                     </div>
 
