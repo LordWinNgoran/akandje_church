@@ -180,7 +180,7 @@ export default function PrivacyPage() {
             </p>
             <div className="space-y-2">
               <p><strong>Email :</strong> privacy@sacrecoeur-akanje.ci</p>
-              <p><strong>Téléphone :</strong> +225 XX XX XX XX XX</p>
+              <p><strong>Téléphone :</strong> 07 07 832 642</p>
               <p><strong>Courrier :</strong> Quasi-Paroisse Sacré-Cœur d'Akandjé, Akandjé, Abidjan, Côte d'Ivoire</p>
             </div>
           </div>

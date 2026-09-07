@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import ParishHomeInfo from './components/ParishHomeInfo';
+import SpiritualLifePage from './components/SpiritualLifePage';
 import ChurchGallery from './components/ChurchGallery';
 import ProgressThermometer from './components/ProgressThermometer';
 import BenefactorsList from './components/BenefactorsList';
@@ -18,15 +20,13 @@ import Footer from './components/Footer';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedCircle, setSelectedCircle] = useState<string | undefined>();
-  const [selectedElement, setSelectedElement] = useState<string | undefined>();
 
   const handleSelectCircle = (circle: string) => {
     setSelectedCircle(circle);
     setCurrentPage('donate');
   };
 
-  const handleSponsorElement = (elementId: string) => {
-    setSelectedElement(elementId);
+  const handleSponsorElement = () => {
     setCurrentPage('donate');
   };
 
@@ -35,7 +35,15 @@ function App() {
       case 'home':
         return (
           <>
-            <Hero onDonate={() => setCurrentPage('donate')} />
+            <Hero
+              onDonate={() => setCurrentPage('donate')}
+              onProjects={() => setCurrentPage('projects')}
+            />
+
+            <ParishHomeInfo
+              onProjects={() => setCurrentPage('projects')}
+              onSpiritual={() => setCurrentPage('spiritual')}
+            />
 
             <ChurchGallery />
 
@@ -50,7 +58,10 @@ function App() {
 
             <GivingCircles onSelectCircle={handleSelectCircle} />
 
-            <ProjectElements onSponsor={handleSponsorElement} />
+            <ProjectElements
+              onDonate={() => setCurrentPage('donate')}
+              onSponsor={handleSponsorElement}
+            />
 
             <div className="bg-gradient-to-br from-amber-50 to-white py-16">
               <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -59,8 +70,8 @@ function App() {
                 </h2>
                 <p className="text-xl text-gray-600 mb-8">
                   Que vous soyez un particulier, une entreprise ou un membre de la diaspora,
-                  votre contribution fait la différence. Ensemble, bâtissons un lieu de culte
-                  qui servira la communauté pour les générations à venir.
+                  votre contribution fait la différence. Ensemble, bâtissons la maison de nos
+                  pasteurs et fortifions la mission pastorale de notre communauté.
                 </p>
                 <button
                   onClick={() => setCurrentPage('donate')}
@@ -81,6 +92,19 @@ function App() {
                 preselectedCircle={selectedCircle}
               />
             </div>
+          </div>
+        );
+
+      case 'spiritual':
+        return <SpiritualLifePage />;
+
+      case 'projects':
+        return (
+          <div className="pt-24">
+            <ProjectElements
+              onDonate={() => setCurrentPage('donate')}
+              onSponsor={handleSponsorElement}
+            />
           </div>
         );
 

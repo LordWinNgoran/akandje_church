@@ -1,4 +1,4 @@
-import { Scale, FileText } from 'lucide-react';
+import { Scale } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function LegalPage() {
@@ -67,8 +67,8 @@ export default function LegalPage() {
               </h2>
               <p>
                 {language === 'fr'
-                  ? 'Les dons collectés via cette plateforme sont exclusivement destinés au financement de la construction de l\'Église Sacré-Cœur d\'Akandjé et des projets annexes de la quasi-paroisse. Tous les dons font l\'objet d\'un suivi rigoureux et sont soumis à un contrôle comptable strict.'
-                  : 'Donations collected through this platform are exclusively intended to finance the construction of the Sacred Heart Church of Akandjé and related quasi-parish projects. All donations are rigorously tracked and subject to strict accounting control.'
+                  ? 'Les dons collectés via cette plateforme sont exclusivement destinés au financement du presbytère, des projets paroissiaux et des besoins validés par la quasi-paroisse. Tous les dons font l\'objet d\'un suivi rigoureux et sont soumis à un contrôle comptable strict.'
+                  : 'Donations collected through this platform are exclusively intended to finance the presbytery, parish projects and needs approved by the quasi-parish. All donations are rigorously tracked and subject to strict accounting control.'
                 }
               </p>
             </section>
@@ -121,7 +121,7 @@ export default function LegalPage() {
               </p>
               <p className="mt-4">
                 <strong>Email :</strong> contact@sacrecoeur-akanje.ci<br />
-                <strong>Téléphone :</strong> +225 XX XX XX XX XX<br />
+                <strong>Téléphone :</strong> 07 07 832 642<br />
                 <strong>Adresse :</strong> Akandjé, Abidjan, Côte d'Ivoire
               </p>
             </section>

@@ -12,8 +12,10 @@ const translations = {
   fr: {
     nav_home: 'Accueil',
     nav_donate: 'Faire un Don',
+    nav_spiritual: 'Vie spirituelle',
+    nav_projects: 'Nos projets',
     nav_transparency: 'Transparence',
-    nav_sponsors: 'Mécènes',
+    nav_sponsors: 'Mécène',
     hero_title: 'Bâtissons ensemble l\'Église Sacré-Cœur d\'Akandjé',
     hero_subtitle: 'Votre don, une pierre précieuse pour notre église',
     hero_quote: 'Que chacun donne comme il l\'a résolu en son cœur...',
@@ -87,8 +89,10 @@ const translations = {
   en: {
     nav_home: 'Home',
     nav_donate: 'Donate',
+    nav_spiritual: 'Spiritual Life',
+    nav_projects: 'Our Projects',
     nav_transparency: 'Transparency',
-    nav_sponsors: 'Sponsors',
+    nav_sponsors: 'Patronage',
     hero_title: 'Let\'s Build the Sacred Heart Church of Akandjé Together',
     hero_subtitle: 'Your donation, a precious stone for our church',
     hero_quote: 'Each one must give as he has decided in his heart...',

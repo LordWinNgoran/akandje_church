@@ -1,5 +1,6 @@
 import { Church, Heart, Users, Target } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import parishPriestsImage from '../assets/parish-priests.jpeg';
 
 export default function AboutPage() {
   const { language } = useLanguage();
@@ -23,10 +24,10 @@ export default function AboutPage() {
     },
     {
       icon: Target,
-      title_fr: 'Excellence Spirituelle',
-      title_en: 'Spiritual Excellence',
-      description_fr: 'Offrir un lieu de culte moderne et propice au recueillement',
-      description_en: 'Providing a modern place of worship conducive to meditation',
+      title_fr: 'Mission Pastorale',
+      title_en: 'Pastoral Mission',
+      description_fr: 'Soutenir les prêtres et les services paroissiaux dans un cadre digne et durable',
+      description_en: 'Supporting priests and parish services in a dignified and lasting setting',
       color: 'from-amber-500 to-amber-600',
     },
   ];
@@ -41,24 +42,24 @@ export default function AboutPage() {
     },
     {
       year: '2024',
-      title_fr: 'Lancement du Projet',
-      title_en: 'Project Launch',
-      description_fr: 'Début de la collecte de fonds et présentation des plans architecturaux',
-      description_en: 'Fundraising campaign launch and architectural plan presentation',
+      title_fr: 'Lancement des Projets Paroissiaux',
+      title_en: 'Launch of Parish Projects',
+      description_fr: 'Mobilisation de la communauté autour des besoins pastoraux prioritaires',
+      description_en: 'Community mobilization around priority pastoral needs',
     },
     {
       year: '2025',
-      title_fr: 'Phase de Construction',
-      title_en: 'Construction Phase',
-      description_fr: 'Démarrage des travaux de construction de l\'église',
-      description_en: 'Start of church construction work',
+      title_fr: 'Projet Presbytère',
+      title_en: 'Presbytery Project',
+      description_fr: 'Mise en avant de la maison des prêtres et de son rôle dans la mission paroissiale',
+      description_en: 'Highlighting the priests’ residence and its role in the parish mission',
     },
     {
       year: '2026',
-      title_fr: 'Inauguration',
-      title_en: 'Inauguration',
-      description_fr: 'Ouverture et consécration de l\'Église Sacré-Cœur',
-      description_en: 'Opening and consecration of Sacred Heart Church',
+      title_fr: 'Poursuite de la Mission',
+      title_en: 'Continuing the Mission',
+      description_fr: 'Accueil, information, sacrements et mobilisation des bienfaiteurs',
+      description_en: 'Welcome, information, sacraments and benefactor mobilization',
     },
   ];
 
@@ -71,7 +72,7 @@ export default function AboutPage() {
           <div className="text-center">
             <Church className="w-20 h-20 mx-auto mb-6" />
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
-              {language === 'fr' ? 'À Propos de Notre Projet' : 'About Our Project'}
+              {language === 'fr' ? 'À Propos de la Quasi-Paroisse' : 'About the Quasi-Parish'}
             </h1>
             <p className="text-xl text-amber-100 max-w-3xl mx-auto">
               {language === 'fr'
@@ -96,10 +97,9 @@ export default function AboutPage() {
                 par l'Archidiocèse d'Abidjan, notre communauté grandit rapidement.
               </p>
               <p>
-                Le projet de construction de notre église représente bien plus qu'un édifice : c'est un
-                lieu de rassemblement, de prière et de partage pour tous les fidèles. Nous aspirons à
-                créer un espace moderne, accueillant et propice au recueillement, qui servira la
-                communauté pour les générations à venir.
+                Le projet du presbytère représente une étape essentielle : offrir au curé et aux
+                prêtres affectés à la paroisse une résidence stable, digne, sécurisée et proche de
+                l’église afin de renforcer leur disponibilité pastorale.
               </p>
               <p>
                 Grâce à la générosité de nos bienfaiteurs et au soutien de la communauté, nous
@@ -109,16 +109,12 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/3] bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl shadow-2xl flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="text-9xl mb-4">⛪</div>
-                <p className="text-2xl font-bold text-gray-900">
-                  {language === 'fr' ? 'Notre Vision' : 'Our Vision'}
-                </p>
-                <p className="text-gray-600 mt-2">
-                  {language === 'fr' ? 'Un lieu de foi pour tous' : 'A place of faith for all'}
-                </p>
-              </div>
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src={parishPriestsImage}
+                alt="Prêtres et fidèles de la Quasi-Paroisse Sacré-Cœur d'Akandjé"
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>

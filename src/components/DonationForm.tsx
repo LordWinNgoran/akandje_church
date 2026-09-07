@@ -129,7 +129,7 @@ export default function DonationForm({ preselectedAmount, preselectedCircle }: D
         </div>
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Merci pour votre générosité!</h2>
         <p className="text-gray-600 mb-8">
-          Votre don contribue à la construction de l'Église Sacré-Cœur d'Akandjé. Un reçu de donation vous sera envoyé par email.
+          Votre don contribue à la construction du presbytère de la Quasi-Paroisse Sacré-Cœur d'Akandjé. Un reçu de donation vous sera envoyé par email.
         </p>
         <button
           onClick={() => setSuccess(false)}
@@ -155,8 +155,8 @@ export default function DonationForm({ preselectedAmount, preselectedCircle }: D
           </div>
           <p className="text-xl text-amber-100 mb-6">
             {language === 'fr'
-              ? 'Chaque don, grand ou petit, est une pierre précieuse dans la construction de notre église. Ensemble, bâtissons un lieu de foi, de communion et d\'espérance pour les générations futures.'
-              : 'Every donation, large or small, is a precious stone in the construction of our church. Together, let\'s build a place of faith, communion and hope for future generations.'
+              ? 'Chaque don, grand ou petit, participe à la construction du presbytère. Ensemble, bâtissons la maison de nos pasteurs pour fortifier la mission pastorale.'
+              : 'Every donation, large or small, supports the construction of the presbytery and strengthens the pastoral mission.'
             }
           </p>
           <div className="grid md:grid-cols-3 gap-4">
