@@ -53,7 +53,7 @@ const sacraments = [
 
 export default function SpiritualLifePage() {
   return (
-    <main className="bg-white pt-24">
+    <main className="bg-white pt-[8.5rem]">
       <section className="bg-gray-950 text-white">
         <div className="grid min-h-[420px] lg:grid-cols-2">
           <div className="flex items-center px-4 py-16 sm:px-6 lg:ml-auto lg:w-full lg:max-w-3xl lg:px-8">

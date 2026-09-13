@@ -5,7 +5,7 @@ export default function LegalPage() {
   const { language } = useLanguage();
 
   return (
-    <div className="pt-24 pb-16 bg-gray-50">
+    <div className="bg-gray-50 pb-16 pt-[8.5rem]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
           <div className="flex items-center space-x-3 mb-8">

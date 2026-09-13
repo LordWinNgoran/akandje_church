@@ -1,4 +1,4 @@
-import { ArrowRight, Church, HeartHandshake } from 'lucide-react';
+import { ArrowRight, Church } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
@@ -56,17 +56,7 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gray-950 pt-24">
-      <div className="flash-info relative z-30 bg-amber-700 text-white shadow-lg">
-        <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3 sm:px-6 lg:px-8">
-          <HeartHandshake className="h-5 w-5 flex-shrink-0" />
-          <p className="text-sm font-semibold sm:text-base">
-            <span className="mr-2 uppercase">Flash info</span>
-            {flashMessage}
-          </p>
-        </div>
-      </div>
-
+    <section className="relative overflow-hidden bg-gray-950 pt-[7.5rem] sm:pt-[8.5rem]">
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
@@ -155,22 +145,10 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
           opacity: 1;
         }
 
-        .flash-info {
-          animation: flash-info 1.7s ease-in-out infinite;
-        }
-
         .hero-slide-image {
           filter: brightness(1.08) contrast(1.06) saturate(1.04);
         }
 
-        @keyframes flash-info {
-          0%, 100% {
-            filter: brightness(1);
-          }
-          50% {
-            filter: brightness(1.25);
-          }
-        }
       `}</style>
     </section>
   );
