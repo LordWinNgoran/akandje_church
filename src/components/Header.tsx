@@ -25,7 +25,7 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
   };
 
   return (
-    <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+    <header className="fixed left-0 right-0 top-0 z-50 bg-white shadow-sm lg:static">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex min-h-20 items-center justify-between gap-3 py-2 sm:min-h-24">
           <div className="flex min-w-0 cursor-pointer items-center gap-2 sm:gap-3" onClick={() => handleNavigate('home')}>

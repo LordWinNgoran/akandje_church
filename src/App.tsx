@@ -158,7 +158,7 @@ function App() {
 
       case 'donate':
         return (
-          <div className="min-h-screen bg-gray-50 pb-16 pt-[8.5rem]">
+          <div className="min-h-screen bg-gray-50 pb-16 pt-[8.5rem] lg:pt-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <DonationForm
                 preselectedCircle={selectedCircle}
@@ -172,7 +172,7 @@ function App() {
 
       case 'projects':
         return (
-          <div className="pt-[8.5rem]">
+          <div className="pt-[8.5rem] lg:pt-0">
             <ProjectElements
               onDonate={() => navigate('donate')}
               onSponsor={handleSponsorElement}
@@ -182,14 +182,14 @@ function App() {
 
       case 'transparency':
         return (
-          <div className="pt-[8.5rem]">
+          <div className="pt-[8.5rem] lg:pt-0">
             <TransparencyPage />
           </div>
         );
 
       case 'sponsors':
         return (
-          <div className="pt-[8.5rem]">
+          <div className="pt-[8.5rem] lg:pt-0">
             <CorporateSponsorship />
           </div>
         );

@@ -5,7 +5,7 @@ const flashMessage =
 
 export default function FlashInfo() {
   return (
-    <div className="fixed left-0 right-0 top-20 z-40 overflow-hidden bg-amber-700 text-white shadow-lg sm:top-24">
+    <div className="fixed left-0 right-0 top-20 z-40 overflow-hidden bg-amber-700 text-white shadow-lg sm:top-24 lg:static">
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-2.5 sm:px-6 lg:px-8">
         <span className="flash-info-label inline-flex flex-shrink-0 items-center gap-2 rounded-full bg-white/15 px-3 py-1.5 text-xs font-bold uppercase tracking-wide backdrop-blur">
           <HeartHandshake className="h-4 w-4" />

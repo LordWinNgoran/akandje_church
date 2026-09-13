@@ -56,7 +56,7 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gray-950 pt-[8.25rem] sm:pt-[8.5rem]">
+    <section className="relative overflow-hidden bg-gray-950 pt-[8.25rem] sm:pt-[8.5rem] lg:pt-0">
       <Swiper
         modules={[Autoplay, EffectFade, Pagination]}
         effect="fade"
