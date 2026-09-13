@@ -28,9 +28,9 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
 
             <div className="leading-tight">
               <p className="mb-1 text-[10px] font-semibold uppercase tracking-wide text-amber-700">
-                Église Catholique de l’Archidiocèse d’Abidjan
+                ARCHIDIOCESE D'ABIDJAN
               </p>
-              <h1 className="text-xl font-bold text-gray-900">Sacré-Cœur d'Akandjé</h1>
+              <h1 className="text-xl font-bold text-gray-900">Sacré-Coeur d'Akandjé 1&2</h1>
               <p className="text-xs text-gray-600">Quasi-Paroisse</p>
             </div>
           </div>

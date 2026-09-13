@@ -18,9 +18,9 @@ export default function Footer({ onNavigate }: FooterProps) {
               <img src={logo} alt="Logo Sacré-Cœur d'Akandjé" className="h-20 w-20 object-contain" />
               <div>
                 <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-amber-400">
-                  Église Catholique de l’Archidiocèse d’Abidjan
+                  ARCHIDIOCESE D'ABIDJAN
                 </p>
-                <h3 className="text-xl font-bold">Sacré-Cœur d'Akandjé</h3>
+                <h3 className="text-xl font-bold">Sacré-Coeur d'Akandjé 1&2</h3>
                 <p className="text-sm text-gray-400">Quasi-Paroisse</p>
               </div>
             </div>

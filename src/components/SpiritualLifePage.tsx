@@ -14,7 +14,7 @@ import parishEucharistImage from '../assets/parish-eucharist.jpeg';
 
 const sacraments = [
   {
-    title: 'La catéchèse aux sacrements',
+    title: 'La catéchèse',
     description: 'Parcours de formation pour préparer les enfants, les jeunes et les adultes à recevoir les sacrements.',
     icon: BookOpen,
     cta: true,

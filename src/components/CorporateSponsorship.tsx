@@ -1,4 +1,4 @@
-import { Award, Building2, Check, Download, Mail, Phone, TrendingUp, Users } from 'lucide-react';
+import { Award, Building2, Check, Download, HeartHandshake, Mail, Phone, Users } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function CorporateSponsorship() {
@@ -6,19 +6,19 @@ export default function CorporateSponsorship() {
 
   const benefits = [
     {
-      icon: TrendingUp,
-      title: t('tax_deduction'),
-      description: "Valorisez votre contribution dans un cadre de mécénat intégrant les possibilités de déduction fiscale applicables.",
+      icon: HeartHandshake,
+      title: 'Soutien spirituel',
+      description: 'Associez votre générosité à la prière et à la présence pastorale auprès des familles.',
     },
     {
       icon: Users,
-      title: t('visibility'),
-      description: 'Associez votre image à un projet paroissial fédérateur auprès des familles, fidèles et acteurs locaux.',
+      title: 'Impact communautaire',
+      description: 'Participez à un projet fédérateur porté par les fidèles, les familles et les acteurs locaux.',
     },
     {
       icon: Award,
-      title: t('csr'),
-      description: 'Renforcez votre engagement RSE par un soutien concret à la vie spirituelle et sociale d’Akandjé.',
+      title: 'Reconnaissance',
+      description: 'Votre contribution est valorisée dans un esprit de gratitude et de communion paroissiale.',
     },
   ];
 
@@ -64,14 +64,14 @@ export default function CorporateSponsorship() {
         <div className="mb-16 text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-2 text-amber-800">
             <Building2 className="h-5 w-5" />
-            <span className="font-semibold">Menu Mécène</span>
+            <span className="font-semibold">Menu Mécènes</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 lg:text-5xl">
-            Déduction fiscale et engagement RSE
+            Devenez mécène du projet presbytère
           </h1>
           <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600">
-            Devenez mécène du projet presbytère et associez votre entreprise à une œuvre
-            durable au service de la mission pastorale.
+            Soutenez une œuvre durable au service de la mission pastorale et de la vie
+            communautaire à Akandjé.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export default function CorporateSponsorship() {
             <h2 className="text-3xl font-bold">Intéressé par un partenariat ?</h2>
             <p className="mt-4 text-lg text-amber-100">
               Contactez la quasi-paroisse pour discuter d’une collaboration adaptée à vos objectifs
-              de mécénat, de visibilité et de responsabilité sociétale.
+              de mécénat, de visibilité et de soutien paroissial.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <button className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-bold text-amber-900 transition-colors hover:bg-amber-50">

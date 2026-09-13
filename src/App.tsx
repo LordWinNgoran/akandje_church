@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import AdministratorMessage from './components/AdministratorMessage';
 import ParishHomeInfo from './components/ParishHomeInfo';
 import SpiritualLifePage from './components/SpiritualLifePage';
 import ChurchGallery from './components/ChurchGallery';
@@ -39,6 +40,8 @@ function App() {
               onDonate={() => setCurrentPage('donate')}
               onProjects={() => setCurrentPage('projects')}
             />
+
+            <AdministratorMessage />
 
             <ParishHomeInfo
               onProjects={() => setCurrentPage('projects')}

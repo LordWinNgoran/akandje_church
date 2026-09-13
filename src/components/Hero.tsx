@@ -24,7 +24,7 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
     {
       eyebrow: 'Accueil paroissial',
       title: "Bienvenue à la Quasi-Paroisse Sacré-Cœur d'Akandjé 1 & 2",
-      subtitle: 'Église Catholique de l’Archidiocèse d’Abidjan',
+      subtitle: 'Accueil, information et communion paroissiale',
       description: 'Un lieu de prière, de communion et de service pastoral au cœur de la communauté.',
       image: parishMassImage,
       imageAlt: "Célébration eucharistique à la Quasi-Paroisse Sacré-Cœur d'Akandjé",
@@ -40,7 +40,7 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
     {
       eyebrow: 'Notre communauté',
       title: 'Groupes, mouvements et associations',
-      subtitle: 'Une paroisse vivante, ouverte aux nouveaux fidèles',
+      subtitle: 'Une paroisse vivante ouverte à tous',
       description: 'Catéchèse, sacrements, prière, engagement communautaire et accompagnement des familles.',
       image: parishCommunityImage,
       imageAlt: "Communauté de la Quasi-Paroisse Sacré-Cœur d'Akandjé",
@@ -88,7 +88,7 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
               <img
                 src={slide.image}
                 alt={slide.imageAlt}
-                className="absolute inset-0 h-full w-full object-cover"
+                className="hero-slide-image absolute inset-0 h-full w-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-950/55 to-gray-950/25" />
               <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-gray-950/80 to-transparent" />
@@ -157,6 +157,10 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
 
         .flash-info {
           animation: flash-info 1.7s ease-in-out infinite;
+        }
+
+        .hero-slide-image {
+          filter: brightness(1.08) contrast(1.06) saturate(1.04);
         }
 
         @keyframes flash-info {
