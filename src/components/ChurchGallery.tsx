@@ -7,7 +7,7 @@ import parishEucharistImage from '../assets/parish-eucharist.jpeg';
 export default function ChurchGallery() {
   const images = [
     {
-      title: 'Communauté en rassemblement',
+      title: 'Communauté en prière',
       description: 'Une paroisse vivante autour de la foi et du service.',
       src: parishCommunityImage,
       alt: "Communauté de la Quasi-Paroisse Sacré-Cœur d'Akandjé",

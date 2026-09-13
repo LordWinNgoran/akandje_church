@@ -44,6 +44,7 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
       description: 'Catéchèse, sacrements, prière, engagement communautaire et accompagnement des familles.',
       image: parishCommunityImage,
       imageAlt: "Communauté de la Quasi-Paroisse Sacré-Cœur d'Akandjé",
+      imagePosition: 'object-center',
     },
     {
       eyebrow: 'Vie sacramentelle',
@@ -78,7 +79,9 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
               <img
                 src={slide.image}
                 alt={slide.imageAlt}
-                className="hero-slide-image absolute inset-0 h-full w-full object-cover object-center"
+                className={`hero-slide-image absolute inset-0 h-full w-full object-cover ${
+                  slide.imagePosition ?? 'object-top'
+                }`}
               />
               <div className="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-950/55 to-gray-950/25" />
               <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-gray-950/80 to-transparent" />

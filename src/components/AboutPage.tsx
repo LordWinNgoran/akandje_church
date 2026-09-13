@@ -34,28 +34,28 @@ export default function AboutPage() {
 
   const timeline = [
     {
-      year: '2023',
+      year: '2025',
       title_fr: 'Création de la Quasi-Paroisse',
       title_en: 'Establishment of the Quasi-Parish',
       description_fr: 'Reconnaissance officielle par l\'Archidiocèse d\'Abidjan',
       description_en: 'Official recognition by the Archdiocese of Abidjan',
     },
     {
-      year: '2024',
+      year: '2026',
       title_fr: 'Lancement des Projets Paroissiaux',
       title_en: 'Launch of Parish Projects',
       description_fr: 'Mobilisation de la communauté autour des besoins pastoraux prioritaires',
       description_en: 'Community mobilization around priority pastoral needs',
     },
     {
-      year: '2025',
+      year: '2026',
       title_fr: 'Projet Presbytère',
       title_en: 'Presbytery Project',
       description_fr: 'Mise en avant de la maison des prêtres et de son rôle dans la mission paroissiale',
       description_en: 'Highlighting the priests’ residence and its role in the parish mission',
     },
     {
-      year: '2026',
+      year: '',
       title_fr: 'Poursuite de la Mission',
       title_en: 'Continuing the Mission',
       description_fr: 'Accueil, information, sacrements et mobilisation des bienfaiteurs',
@@ -181,9 +181,11 @@ export default function AboutPage() {
                         index % 2 === 0 ? 'md:text-right' : 'md:text-left'
                       }`}
                     >
-                      <div className="inline-block bg-amber-700 text-white px-4 py-2 rounded-full font-bold mb-3">
-                        {item.year}
-                      </div>
+                      {item.year && (
+                        <div className="inline-block bg-amber-700 text-white px-4 py-2 rounded-full font-bold mb-3">
+                          {item.year}
+                        </div>
+                      )}
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {language === 'fr' ? item.title_fr : item.title_en}
                       </h3>
