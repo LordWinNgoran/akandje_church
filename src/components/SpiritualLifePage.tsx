@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   ArrowRight,
   BookOpen,
@@ -18,18 +19,21 @@ const sacraments = [
     description: 'Parcours de formation pour préparer les enfants, les jeunes et les adultes à recevoir les sacrements.',
     icon: BookOpen,
     cta: true,
+    contactMessage: 'Contactez le secrétariat au 07 03 660 000',
   },
   {
     title: 'Le sacrement de Baptême',
     description: 'Accueil dans la vie chrétienne et accompagnement des familles dans la préparation baptismale.',
     icon: Droplets,
     cta: true,
+    contactMessage: 'Contactez le secrétariat au 07 03 660 000',
   },
   {
     title: 'Le sacrement de Mariage',
     description: 'Préparation humaine, spirituelle et pastorale des couples qui souhaitent s’engager devant Dieu.',
     icon: HeartHandshake,
     cta: true,
+    contactMessage: 'Contactez le Père Administrateur au 07 07 832 642',
   },
   {
     title: 'Le sacrement des Malades',
@@ -52,6 +56,8 @@ const sacraments = [
 ];
 
 export default function SpiritualLifePage() {
+  const [activeContact, setActiveContact] = useState<string | null>(null);
+
   return (
     <main className="bg-white pt-[8.5rem] lg:pt-0">
       <section className="bg-gray-950 text-white">
@@ -97,10 +103,24 @@ export default function SpiritualLifePage() {
                   <h2 className="text-xl font-bold text-gray-900">{item.title}</h2>
                   <p className="mt-3 text-gray-600">{item.description}</p>
                   {item.cta && (
-                    <button className="mt-5 inline-flex items-center gap-2 rounded-lg border border-amber-300 px-4 py-2 font-semibold text-amber-800 transition-colors hover:bg-amber-50">
-                      En savoir plus
-                      <ArrowRight className="h-4 w-4" />
-                    </button>
+                    <>
+                      <button
+                        type="button"
+                        onClick={() => setActiveContact(activeContact === item.title ? null : item.title)}
+                        aria-expanded={activeContact === item.title}
+                        className="mt-5 inline-flex items-center gap-2 rounded-lg border border-amber-300 px-4 py-2 font-semibold text-amber-800 transition-colors hover:bg-amber-50"
+                      >
+                        En savoir plus
+                        <ArrowRight className="h-4 w-4" />
+                      </button>
+
+                      {activeContact === item.title && (
+                        <div className="mt-4 flex items-start gap-3 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm font-semibold text-amber-950">
+                          <Phone className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                          <p>{item.contactMessage}</p>
+                        </div>
+                      )}
+                    </>
                   )}
                 </article>
               );
@@ -119,14 +139,14 @@ export default function SpiritualLifePage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="tel:+2250707832642"
+                href="tel:+2250703660000"
                 className="inline-flex items-center gap-2 rounded-lg bg-gray-900 px-5 py-3 font-semibold text-white transition-colors hover:bg-gray-800"
               >
                 <Phone className="h-5 w-5" />
-                07 07 832 642
+                07 03 660 000
               </a>
               <a
-                href="https://wa.me/2250707832642"
+                href="https://wa.me/2250703660000"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-5 py-3 font-semibold text-gray-800 transition-colors hover:border-amber-400 hover:text-amber-800"

@@ -2,8 +2,8 @@ import { ArrowRight, Church } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
-import parishMassImage from '../assets/parish-mass.jpeg';
-import parishPriestsImage from '../assets/parish-priests.jpeg';
+import heroWelcomeImage from '../assets/hero-welcome.jpeg';
+import heroHouseImage from '../assets/hero-house.jpeg';
 import parishCommunityImage from '../assets/parish-community.jpeg';
 import parishBaptismGroupImage from '../assets/parish-baptism-group.jpeg';
 import 'swiper/css';
@@ -26,16 +26,18 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
       title: "Bienvenue à la Quasi-Paroisse Sacré-Cœur d'Akandjé 1 & 2",
       subtitle: 'Accueil, information et communion paroissiale',
       description: 'Un lieu de prière, de communion et de service pastoral au cœur de la communauté.',
-      image: parishMassImage,
+      image: heroWelcomeImage,
       imageAlt: "Célébration eucharistique à la Quasi-Paroisse Sacré-Cœur d'Akandjé",
+      imagePosition: 'object-[center_18%]',
     },
     {
       eyebrow: 'Projet presbytère',
       title: 'La maison de nos pasteurs',
       subtitle: flashMessage,
       description: 'La construction du presbytère donnera aux prêtres une résidence stable, digne et proche de la vie paroissiale.',
-      image: parishPriestsImage,
+      image: heroHouseImage,
       imageAlt: "Prêtres et fidèles de la Quasi-Paroisse Sacré-Cœur d'Akandjé",
+      imagePosition: 'object-center',
     },
     {
       eyebrow: 'Notre communauté',

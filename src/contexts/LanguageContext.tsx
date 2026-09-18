@@ -11,6 +11,7 @@ interface LanguageContextType {
 const translations = {
   fr: {
     nav_home: 'Accueil',
+    nav_newcomer: 'Nouveau venu',
     nav_donate: 'Faire un Don',
     nav_spiritual: 'Vie spirituelle',
     nav_projects: 'Nos projets',
@@ -85,6 +86,7 @@ const translations = {
   },
   en: {
     nav_home: 'Home',
+    nav_newcomer: 'New here',
     nav_donate: 'Donate',
     nav_spiritual: 'Spiritual Life',
     nav_projects: 'Our Projects',

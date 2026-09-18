@@ -1,6 +1,6 @@
 import { Camera, MapPin } from 'lucide-react';
 import parishCommunityImage from '../assets/parish-community.jpeg';
-import parishPriestsImage from '../assets/parish-priests.jpeg';
+import heroHouseImage from '../assets/hero-house.jpeg';
 import parishMassImage from '../assets/parish-mass.jpeg';
 import parishEucharistImage from '../assets/parish-eucharist.jpeg';
 
@@ -15,7 +15,7 @@ export default function ChurchGallery() {
     {
       title: 'Pasteurs et fidèles',
       description: 'La mission pastorale se vit dans la proximité.',
-      src: parishPriestsImage,
+      src: heroHouseImage,
       alt: "Prêtres et fidèles à Sacré-Cœur d'Akandjé",
     },
     {

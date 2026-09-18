@@ -129,7 +129,7 @@ export default function DonationForm({ preselectedAmount, preselectedCircle }: D
         </div>
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Merci pour votre générosité!</h2>
         <p className="text-gray-600 mb-8">
-          Votre don contribue à la construction du presbytère de la Quasi-Paroisse Sacré-Cœur d'Akandjé. Un reçu de donation vous sera envoyé par email.
+          Votre don contribue à la construction du presbytère de la Quasi-Paroisse Sacré-Cœur d'Akandjé. Une confirmation de donation vous sera envoyée par email.
         </p>
         <button
           onClick={() => setSuccess(false)}
@@ -166,7 +166,7 @@ export default function DonationForm({ preselectedAmount, preselectedCircle }: D
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
               <CheckCircle2 className="w-6 h-6 text-amber-200 mb-2" />
-              <p className="text-sm font-semibold">{language === 'fr' ? 'Reçu Fiscal Instantané' : 'Instant Tax Receipt'}</p>
+              <p className="text-sm font-semibold">{language === 'fr' ? 'Confirmation par email' : 'Email Confirmation'}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
               <Sparkles className="w-6 h-6 text-amber-200 mb-2" />

@@ -13,6 +13,7 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [
     { page: 'home', label: t('nav_home') },
+    { page: 'newcomer', label: t('nav_newcomer') },
     { page: 'spiritual', label: t('nav_spiritual') },
     { page: 'projects', label: t('nav_projects') },
     { page: 'transparency', label: t('nav_transparency') },
@@ -42,7 +43,7 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
             </div>
           </div>
 
-          <nav className="hidden lg:flex items-center space-x-5">
+          <nav className="hidden lg:flex items-center space-x-4">
             {navItems.map((item) => (
               <button
                 key={item.page}

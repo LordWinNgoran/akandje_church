@@ -1,6 +1,6 @@
 import { Church, Heart, Users, Target } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import parishPriestsImage from '../assets/parish-priests.jpeg';
+import aboutHistoryImage from '../assets/about-history.jpeg';
 
 export default function AboutPage() {
   const { language } = useLanguage();
@@ -34,25 +34,25 @@ export default function AboutPage() {
 
   const timeline = [
     {
+      year: '2019',
+      title_fr: 'Chapelle',
+      title_en: 'Chapel',
+      description_fr: 'Premières célébrations eucharistiques et naissance officielle de la CEB/Chapelle Sacré-Cœur de Jésus d’Akandjé 2',
+      description_en: 'First Eucharistic celebrations and official birth of the Sacred Heart chapel community of Akandjé 2',
+    },
+    {
       year: '2025',
-      title_fr: 'Création de la Quasi-Paroisse',
-      title_en: 'Establishment of the Quasi-Parish',
-      description_fr: 'Reconnaissance officielle par l\'Archidiocèse d\'Abidjan',
-      description_en: 'Official recognition by the Archdiocese of Abidjan',
+      title_fr: 'Quasi-paroisse',
+      title_en: 'Quasi-parish',
+      description_fr: 'Érection de la chapelle Sacré-Cœur en Quasi-paroisse pour l’année pastorale 2025-2026',
+      description_en: 'Elevation of the Sacred Heart chapel to a Quasi-parish for the 2025-2026 pastoral year',
     },
     {
       year: '2026',
-      title_fr: 'Lancement des Projets Paroissiaux',
-      title_en: 'Launch of Parish Projects',
-      description_fr: 'Mobilisation de la communauté autour des besoins pastoraux prioritaires',
-      description_en: 'Community mobilization around priority pastoral needs',
-    },
-    {
-      year: '2026',
-      title_fr: 'Projet Presbytère',
-      title_en: 'Presbytery Project',
-      description_fr: 'Mise en avant de la maison des prêtres et de son rôle dans la mission paroissiale',
-      description_en: 'Highlighting the priests’ residence and its role in the parish mission',
+      title_fr: 'Lancement du projet PRESBYTERE',
+      title_en: 'Launch of the Presbytery Project',
+      description_fr: 'Mobilisation de la communauté autour de la construction de la maison des pasteurs',
+      description_en: 'Community mobilization around the construction of the priests’ residence',
     },
     {
       year: '',
@@ -92,18 +92,39 @@ export default function AboutPage() {
             </h2>
             <div className="prose prose-lg text-gray-600 space-y-4">
               <p>
-                La Quasi-Paroisse Sacré-Cœur d'Akandjé est née de la volonté de créer un centre spirituel
-                au cœur d'un quartier résidentiel en pleine expansion à Abidjan. Reconnue officiellement
-                par l'Archidiocèse d'Abidjan, notre communauté grandit rapidement.
+                C'est en septembre 2017 que naît la communauté Sacré-Cœur d'Akandjé.
+                Venu bénir le domicile de la famille EKON à la Cité Performer 1, le Père
+                Nicolas ADOPO encourage alors les familles du quartier à se réunir régulièrement.
               </p>
               <p>
-                Le projet du presbytère représente une étape essentielle : offrir au curé et aux
-                prêtres affectés à la paroisse une résidence stable, digne, sécurisée et proche de
-                l’église afin de renforcer leur disponibilité pastorale.
+                Les familles catholiques répondent à cet appel et se rassemblent. Des démarches
+                sont entreprises afin que le site réservé à l'Église Catholique à Akandjé 2 par la
+                communauté villageoise puisse enfin accueillir les célébrations eucharistiques. Ce
+                vœu se réalise le samedi 13 avril 2019, jour de la fête des Rameaux, lorsque les
+                premières célébrations y sont enfin organisées.
               </p>
               <p>
-                Grâce à la générosité de nos bienfaiteurs et au soutien de la communauté, nous
-                construisons ensemble un héritage spirituel durable pour Akandjé et ses environs.
+                Quelques mois plus tard, le 24 novembre 2019, le Père Curé Raphaël Yapo Saint
+                proclame solennellement la naissance de la CEB/Chapelle Sacré-Cœur de Jésus
+                d'Akandjé 2, marquant ainsi officiellement la reconnaissance de cette jeune
+                communauté. M. EKON Patrice en est désigné responsable.
+              </p>
+              <p>
+                Pour accompagner cet élan, un conseil est mis en place. Sa mission est de favoriser
+                les activités de la communauté, discerner les orientations à prendre, proposer des
+                projets, rester attentif aux préoccupations des fidèles et rendre compte au Curé
+                Rodolphe ETTI.
+              </p>
+              <p>
+                Près de six ans après ses premiers pas, la communauté franchit une nouvelle étape :
+                à la faveur de l'année pastorale 2025-2026, la chapelle Sacré-Cœur est érigée en
+                Quasi-paroisse. Le Révérend Père Arnaud ASSONHON en devient l'administrateur, et
+                la nouvelle Quasi-paroisse est rattachée au Doyenné Père Eugène NEVRY THIE.
+              </p>
+              <p>
+                Sous la conduite de son administrateur et avec la grâce de Dieu, la communauté
+                paroissiale s’agrandit, se renforce spirituellement et la Quasi-paroisse se dote
+                progressivement des infrastructures nécessaires à son érection en Paroisse.
               </p>
             </div>
           </div>
@@ -111,7 +132,7 @@ export default function AboutPage() {
           <div className="relative">
             <div className="aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src={parishPriestsImage}
+                src={aboutHistoryImage}
                 alt="Prêtres et fidèles de la Quasi-Paroisse Sacré-Cœur d'Akandjé"
                 className="h-full w-full object-cover"
               />

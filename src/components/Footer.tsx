@@ -73,6 +73,14 @@ export default function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-2">
               <li>
                 <button
+                  onClick={() => onNavigate('newcomer')}
+                  className="text-gray-400 transition-colors hover:text-amber-500"
+                >
+                  {t('nav_newcomer')}
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => onNavigate('spiritual')}
                   className="text-gray-400 transition-colors hover:text-amber-500"
                 >

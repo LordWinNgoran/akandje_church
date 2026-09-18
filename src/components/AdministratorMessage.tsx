@@ -1,5 +1,5 @@
 import { HeartHandshake, Quote } from 'lucide-react';
-import administratorPhoto from '../assets/parish-eucharist.jpeg';
+import administratorPhoto from '../assets/administrator-photo.jpeg';
 
 const messageParagraphs = [
   'C’est avec une grande joie que je vous accueille sur cette plateforme, conçue pour renforcer notre communion et répondre à la vision diocésaine d’une Église synodale, autonome et au service de tous.',
@@ -17,7 +17,7 @@ export default function AdministratorMessage() {
             <aside className="relative min-h-[360px] bg-stone-900 sm:min-h-[440px] lg:min-h-full">
               <img
                 src={administratorPhoto}
-                alt="Révérend Père Ello José Arnaud Assonhon"
+                alt="Révérend Père Arnaud ASSONHON"
                 className="absolute inset-0 h-full w-full object-cover object-center brightness-105 contrast-105 saturate-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />
@@ -29,7 +29,7 @@ export default function AdministratorMessage() {
 
               <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
                 <p className="text-lg font-bold leading-snug">
-                  Révérend Père Ello José Arnaud Assonhon
+                  Révérend Père Arnaud ASSONHON
                 </p>
                 <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/85">
                   Administrateur de la Quasi-Paroisse Sacré-Cœur d’Akandjé I et II
@@ -58,7 +58,7 @@ export default function AdministratorMessage() {
                   <p className="text-gray-700">Avec toute mon affection pastorale,</p>
                   <div className="mt-4 rounded-lg border-l-4 border-amber-700 bg-amber-50/70 px-5 py-4">
                     <p className="font-bold text-gray-900">
-                      Révérend Père Ello José Arnaud Assonhon
+                      Révérend Père Arnaud ASSONHON
                     </p>
                     <p className="mt-1 text-sm text-gray-600">
                       Administrateur de la Quasi-Paroisse Sacré-Cœur d’Akandjé I et II

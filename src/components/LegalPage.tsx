@@ -75,18 +75,6 @@ export default function LegalPage() {
 
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                {language === 'fr' ? 'Reçus fiscaux' : 'Tax Receipts'}
-              </h2>
-              <p>
-                {language === 'fr'
-                  ? 'Conformément à la législation en vigueur en Côte d\'Ivoire, la Quasi-Paroisse délivre des reçus fiscaux pour tous les dons éligibles. Ces documents permettent aux donateurs de bénéficier d\'avantages fiscaux selon les dispositions légales applicables.'
-                  : 'In accordance with the legislation in force in Côte d\'Ivoire, the Quasi-Parish issues tax receipts for all eligible donations. These documents allow donors to benefit from tax advantages according to applicable legal provisions.'
-                }
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 {language === 'fr' ? 'Limitation de responsabilité' : 'Limitation of Liability'}
               </h2>
               <p>

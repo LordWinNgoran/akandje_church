@@ -5,6 +5,7 @@ import FlashInfo from './components/FlashInfo';
 import Hero from './components/Hero';
 import AdministratorMessage from './components/AdministratorMessage';
 import ParishHomeInfo from './components/ParishHomeInfo';
+import NewcomerPage from './components/NewcomerPage';
 import SpiritualLifePage from './components/SpiritualLifePage';
 import ChurchGallery from './components/ChurchGallery';
 import ProgressThermometer from './components/ProgressThermometer';
@@ -21,6 +22,7 @@ import Footer from './components/Footer';
 
 type Page =
   | 'home'
+  | 'newcomer'
   | 'donate'
   | 'spiritual'
   | 'projects'
@@ -32,6 +34,7 @@ type Page =
 
 const pageRoutes: Record<Page, string> = {
   home: '/',
+  newcomer: '/nouveau-venu',
   donate: '/faire-un-don',
   spiritual: '/vie-spirituelle',
   projects: '/nos-projets',
@@ -166,6 +169,9 @@ function App() {
             </div>
           </div>
         );
+
+      case 'newcomer':
+        return <NewcomerPage />;
 
       case 'spiritual':
         return <SpiritualLifePage />;

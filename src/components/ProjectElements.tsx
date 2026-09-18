@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { ArrowRight, Building2, Check, HeartHandshake, Home, ShieldCheck, Users } from 'lucide-react';
 import { supabase, ProjectElement } from '../lib/supabase';
 import { useLanguage } from '../contexts/LanguageContext';
+import presbyteryPlan3dOne from '../assets/presbytery-plan-3d-1.jpeg';
+import presbyteryPlan3dTwo from '../assets/presbytery-plan-3d-2.jpeg';
 
 interface ProjectElementsProps {
   onDonate: () => void;
@@ -29,6 +31,17 @@ const projectPriorities = [
     icon: ShieldCheck,
     title: 'Espaces bien séparés',
     description: 'Des zones publiques pour l’accueil et des espaces privés préservés pour la vie des prêtres.',
+  },
+];
+
+const presbyteryPlanImages = [
+  {
+    src: presbyteryPlan3dOne,
+    alt: 'Plan 3D du presbytère - vue principale',
+  },
+  {
+    src: presbyteryPlan3dTwo,
+    alt: 'Plan 3D du presbytère - vue secondaire',
   },
 ];
 
@@ -213,6 +226,26 @@ export default function ProjectElements({ onDonate, onSponsor }: ProjectElements
                 </article>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-stone-100 bg-stone-50/70 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 lg:grid-cols-2">
+            {presbyteryPlanImages.map((image) => (
+              <figure
+                key={image.src}
+                className="overflow-hidden rounded-lg border border-stone-200 bg-white shadow-lg"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="aspect-[16/7] w-full object-cover"
+                  loading="lazy"
+                />
+              </figure>
+            ))}
           </div>
         </div>
       </section>
