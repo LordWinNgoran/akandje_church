@@ -37,29 +37,29 @@ export default function AboutPage() {
       year: '2019',
       title_fr: 'Chapelle',
       title_en: 'Chapel',
-      description_fr: 'Premières célébrations eucharistiques et naissance officielle de la CEB/Chapelle Sacré-Cœur de Jésus d’Akandjé 2',
-      description_en: 'First Eucharistic celebrations and official birth of the Sacred Heart chapel community of Akandjé 2',
+      description_fr: '',
+      description_en: '',
     },
     {
       year: '2025',
       title_fr: 'Quasi-paroisse',
       title_en: 'Quasi-parish',
-      description_fr: 'Érection de la chapelle Sacré-Cœur en Quasi-paroisse pour l’année pastorale 2025-2026',
-      description_en: 'Elevation of the Sacred Heart chapel to a Quasi-parish for the 2025-2026 pastoral year',
+      description_fr: '',
+      description_en: '',
     },
     {
       year: '2026',
       title_fr: 'Lancement du projet PRESBYTERE',
       title_en: 'Launch of the Presbytery Project',
-      description_fr: 'Mobilisation de la communauté autour de la construction de la maison des pasteurs',
-      description_en: 'Community mobilization around the construction of the priests’ residence',
+      description_fr: '',
+      description_en: '',
     },
     {
       year: '',
       title_fr: 'Poursuite de la Mission',
       title_en: 'Continuing the Mission',
-      description_fr: 'Accueil, information, sacrements et mobilisation des bienfaiteurs',
-      description_en: 'Welcome, information, sacraments and benefactor mobilization',
+      description_fr: '',
+      description_en: '',
     },
   ];
 
@@ -186,13 +186,13 @@ export default function AboutPage() {
           </p>
 
           <div className="relative">
-            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-amber-600 to-amber-800"></div>
+            <div className="absolute left-4 top-0 h-full w-1 -translate-x-1/2 bg-gradient-to-b from-amber-600 to-amber-800 md:left-1/2"></div>
 
             <div className="space-y-12">
               {timeline.map((item, index) => (
                 <div
                   key={index}
-                  className={`relative flex items-center ${
+                  className={`relative flex items-start pl-12 md:items-center md:pl-0 ${
                     index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}
                 >
@@ -210,15 +210,17 @@ export default function AboutPage() {
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {language === 'fr' ? item.title_fr : item.title_en}
                       </h3>
-                      <p className="text-gray-600">
-                        {language === 'fr' ? item.description_fr : item.description_en}
-                      </p>
+                      {(language === 'fr' ? item.description_fr : item.description_en) && (
+                        <p className="text-gray-600">
+                          {language === 'fr' ? item.description_fr : item.description_en}
+                        </p>
+                      )}
                     </div>
                   </div>
 
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-amber-700 rounded-full border-4 border-white shadow-lg"></div>
+                  <div className="absolute left-4 top-6 h-8 w-8 -translate-x-1/2 rounded-full border-4 border-white bg-amber-700 shadow-lg md:left-1/2 md:top-1/2 md:-translate-y-1/2"></div>
 
-                  <div className="flex-1"></div>
+                  <div className="hidden flex-1 md:block"></div>
                 </div>
               ))}
             </div>

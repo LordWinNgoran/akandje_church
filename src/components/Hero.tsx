@@ -3,7 +3,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import heroWelcomeImage from '../assets/hero-welcome.jpeg';
-import heroHouseImage from '../assets/hero-house.jpeg';
+import presbyteryPlan3dOne from '../assets/presbytery-plan-3d-1.jpeg';
+import presbyteryPlan3dTwo from '../assets/presbytery-plan-3d-2.jpeg';
 import parishCommunityImage from '../assets/parish-community.jpeg';
 import parishBaptismGroupImage from '../assets/parish-baptism-group.jpeg';
 import 'swiper/css';
@@ -22,6 +23,7 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
 
   const slides = [
     {
+      id: 'welcome',
       eyebrow: 'Accueil paroissial',
       title: "Bienvenue à la Quasi-Paroisse Sacré-Cœur d'Akandjé 1 & 2",
       subtitle: 'Accueil, information et communion paroissiale',
@@ -31,15 +33,27 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
       imagePosition: 'object-[center_18%]',
     },
     {
+      id: 'presbytery-plan-one',
       eyebrow: 'Projet presbytère',
       title: 'La maison de nos pasteurs',
       subtitle: flashMessage,
       description: 'La construction du presbytère donnera aux prêtres une résidence stable, digne et proche de la vie paroissiale.',
-      image: heroHouseImage,
-      imageAlt: "Prêtres et fidèles de la Quasi-Paroisse Sacré-Cœur d'Akandjé",
+      image: presbyteryPlan3dOne,
+      imageAlt: 'Plan 3D du presbytère - première vue',
       imagePosition: 'object-center',
     },
     {
+      id: 'presbytery-plan-two',
+      eyebrow: 'Projet presbytère',
+      title: 'La maison de nos pasteurs',
+      subtitle: flashMessage,
+      description: 'La construction du presbytère donnera aux prêtres une résidence stable, digne et proche de la vie paroissiale.',
+      image: presbyteryPlan3dTwo,
+      imageAlt: 'Plan 3D du presbytère - deuxième vue',
+      imagePosition: 'object-center',
+    },
+    {
+      id: 'community',
       eyebrow: 'Notre communauté',
       title: 'Groupes, mouvements et associations',
       subtitle: 'Une paroisse vivante ouverte à tous',
@@ -49,6 +63,7 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
       imagePosition: 'object-center',
     },
     {
+      id: 'sacraments',
       eyebrow: 'Vie sacramentelle',
       title: 'Grandir dans la foi',
       subtitle: 'Baptême, mariage, confession, malades et funérailles chrétiennes',
@@ -76,7 +91,7 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
         className="hero-swiper"
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.title}>
+          <SwiperSlide key={slide.id}>
             <div className="relative flex min-h-[calc(100vh-9rem)] items-end pb-20 sm:pb-24">
               <img
                 src={slide.image}
