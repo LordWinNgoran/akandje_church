@@ -14,24 +14,35 @@ export default function AdministratorMessage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-lg border border-stone-200/80 bg-white shadow-[0_24px_70px_rgba(31,41,55,0.10)]">
           <div className="grid lg:grid-cols-[380px_1fr]">
-            <aside className="relative min-h-[360px] bg-stone-900 sm:min-h-[440px] lg:min-h-full">
-              <img
-                src={administratorPhoto}
-                alt="Révérend Père Arnaud ASSONHON"
-                className="absolute inset-0 h-full w-full object-cover object-center brightness-105 contrast-105 saturate-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />
+            <aside className="bg-stone-900 lg:relative lg:min-h-full">
+              <div className="relative min-h-[360px] sm:min-h-[440px] lg:absolute lg:inset-0 lg:min-h-full">
+                <img
+                  src={administratorPhoto}
+                  alt="Révérend Père Arnaud ASSONHON"
+                  className="absolute inset-0 h-full w-full object-cover object-center brightness-105 contrast-105 saturate-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-black/10 lg:bg-gradient-to-t lg:from-black/80 lg:via-black/20 lg:to-black/10" />
 
-              <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-amber-900 shadow-sm backdrop-blur">
-                <HeartHandshake className="h-4 w-4" />
-                Accueil pastoral
+                <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-amber-900 shadow-sm backdrop-blur">
+                  <HeartHandshake className="h-4 w-4" />
+                  Accueil pastoral
+                </div>
+
+                <div className="absolute inset-x-0 bottom-0 hidden p-6 text-white sm:p-8 lg:block">
+                  <p className="text-lg font-bold leading-snug">
+                    Révérend Père Arnaud ASSONHON
+                  </p>
+                  <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/85">
+                    Administrateur de la Quasi-Paroisse Sacré-Cœur d’Akandjé I et II
+                  </p>
+                </div>
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
+              <div className="bg-white px-6 py-5 text-gray-900 lg:hidden">
                 <p className="text-lg font-bold leading-snug">
                   Révérend Père Arnaud ASSONHON
                 </p>
-                <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/85">
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
                   Administrateur de la Quasi-Paroisse Sacré-Cœur d’Akandjé I et II
                 </p>
               </div>

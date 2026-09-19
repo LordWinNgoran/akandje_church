@@ -4,6 +4,9 @@ import heroHouseImage from '../assets/hero-house.jpeg';
 import parishMassImage from '../assets/parish-mass.jpeg';
 import parishEucharistImage from '../assets/parish-eucharist.jpeg';
 
+const mapEmbedUrl =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4954.835229186238!2d-3.9056081250160446!3d5.395096894583944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc18d5fa516b639%3A0x2480fee691e57bec!2sParoisse%20Sacr%C3%A9-C%C5%93ur%20de%20J%C3%A9sus%20d'Akandje%201%262!5e1!3m2!1sfr!2sci!4v1789842285913!5m2!1sfr!2sci";
+
 export default function ChurchGallery() {
   const images = [
     {
@@ -85,16 +88,15 @@ export default function ChurchGallery() {
             </p>
           </div>
 
-          <div className="rounded-lg bg-gray-50 p-6">
-            <div className="flex items-start gap-3">
-              <div className="rounded-lg bg-amber-100 p-2">
-                <MapPin className="h-5 w-5 text-amber-700" />
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">Akandjé, Abidjan</p>
-                <p className="mt-1 text-sm text-gray-600">Quasi-Paroisse Sacré-Cœur d'Akandjé 1 & 2</p>
-              </div>
-            </div>
+          <div className="overflow-hidden rounded-lg bg-gray-50 shadow-sm">
+            <iframe
+              src={mapEmbedUrl}
+              title="Carte de la Quasi-Paroisse Sacré-Cœur d'Akandjé 1 & 2"
+              className="h-[320px] w-full border-0 md:h-full md:min-h-[360px]"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
           </div>
         </div>
       </div>
