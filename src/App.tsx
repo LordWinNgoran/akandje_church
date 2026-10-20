@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import AdministratorMessage from './components/AdministratorMessage';
 import ParishHomeInfo from './components/ParishHomeInfo';
 import NewcomerPage from './components/NewcomerPage';
+import PastorsPage from './components/PastorsPage';
 import SpiritualLifePage from './components/SpiritualLifePage';
 import ChurchGallery from './components/ChurchGallery';
 import ProgressThermometer from './components/ProgressThermometer';
@@ -23,6 +24,7 @@ import Footer from './components/Footer';
 type Page =
   | 'home'
   | 'newcomer'
+  | 'pastors'
   | 'donate'
   | 'spiritual'
   | 'projects'
@@ -35,6 +37,7 @@ type Page =
 const pageRoutes: Record<Page, string> = {
   home: '/',
   newcomer: '/nouveau-venu',
+  pastors: '/nos-pasteurs',
   donate: '/faire-un-don',
   spiritual: '/vie-spirituelle',
   projects: '/nos-projets',
@@ -173,6 +176,9 @@ function App() {
       case 'newcomer':
         return <NewcomerPage />;
 
+      case 'pastors':
+        return <PastorsPage />;
+
       case 'spiritual':
         return <SpiritualLifePage />;
 
@@ -201,7 +207,7 @@ function App() {
         );
 
       case 'about':
-        return <AboutPage />;
+        return <AboutPage onPastors={() => navigate('pastors')} />;
 
       case 'legal':
         return <LegalPage />;

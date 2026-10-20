@@ -12,6 +12,7 @@ const translations = {
   fr: {
     nav_home: 'Accueil',
     nav_newcomer: 'Nouveau venu',
+    nav_pastors: 'Nos pasteurs',
     nav_donate: 'Faire un Don',
     nav_spiritual: 'Vie spirituelle',
     nav_projects: 'Nos projets',
@@ -87,6 +88,7 @@ const translations = {
   en: {
     nav_home: 'Home',
     nav_newcomer: 'New here',
+    nav_pastors: 'Our pastors',
     nav_donate: 'Donate',
     nav_spiritual: 'Spiritual Life',
     nav_projects: 'Our Projects',

@@ -38,7 +38,7 @@ export default function Header({ onNavigate, currentPage }: HeaderProps) {
               <p className="mb-1 truncate text-[9px] font-semibold uppercase tracking-wide text-amber-700 sm:text-[10px]">
                 ARCHIDIOCESE D'ABIDJAN
               </p>
-              <h1 className="truncate text-sm font-bold text-gray-900 sm:text-xl">Sacré-Coeur d'Akandjé 1&2</h1>
+              <h1 className="truncate text-xs font-bold text-gray-900 sm:text-lg">Sacré-Coeur d'Akandjé 1&2</h1>
               <p className="text-xs text-gray-600">Quasi-Paroisse</p>
             </div>
           </div>

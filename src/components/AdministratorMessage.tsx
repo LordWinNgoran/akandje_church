@@ -1,4 +1,4 @@
-import { HeartHandshake, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
 import administratorPhoto from '../assets/administrator-photo.jpeg';
 
 const messageParagraphs = [
@@ -22,11 +22,6 @@ export default function AdministratorMessage() {
                   className="absolute inset-0 h-full w-full object-cover object-center brightness-105 contrast-105 saturate-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-black/10 lg:bg-gradient-to-t lg:from-black/80 lg:via-black/20 lg:to-black/10" />
-
-                <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-amber-900 shadow-sm backdrop-blur">
-                  <HeartHandshake className="h-4 w-4" />
-                  Accueil pastoral
-                </div>
 
                 <div className="absolute inset-x-0 bottom-0 hidden p-6 text-white sm:p-8 lg:block">
                   <p className="text-lg font-bold leading-snug">

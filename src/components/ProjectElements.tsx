@@ -2,16 +2,21 @@ import { useEffect, useState } from 'react';
 import { ArrowRight, Building2, Check, HeartHandshake, Home, ShieldCheck, Users } from 'lucide-react';
 import { supabase, ProjectElement } from '../lib/supabase';
 import { useLanguage } from '../contexts/LanguageContext';
-import presbyteryPlan3dOne from '../assets/presbytery-plan-3d-1.jpeg';
-import presbyteryPlan3dTwo from '../assets/presbytery-plan-3d-2.jpeg';
+import presbyteryNewsOne from '../assets/presbytery-news-1.jpg';
+import presbyteryNewsTwo from '../assets/presbytery-news-2.jpg';
+import presbyteryNewsThree from '../assets/presbytery-news-3.jpg';
+import presbyteryNewsFour from '../assets/presbytery-news-4.jpg';
 
 interface ProjectElementsProps {
   onDonate: () => void;
   onSponsor: (elementId: string) => void;
 }
 
-const presbyteryDescription =
-  'Le presbytère a pour fonction d’assurer la résidence stable, digne et sécurisée du curé et des autres prêtres affectés à la paroisse. Sa proximité avec l’église favorise la disponibilité pastorale et l’accomplissement régulier des fonctions paroissiales. Il comprend des espaces d’accueil individuel, de travail administratif, de vie fraternelle et de prière, tout en préservant une séparation claire entre les espaces privés des prêtres et les espaces accessibles au public.';
+const presbyteryDescription = [
+  'Le presbytère a pour fonction d’assurer la résidence stable, digne et sécurisée du curé et des prêtres affectés à la paroisse qui desserviront nos lieux de cultes (les chapelles Saint-Michel, Notre-Dame de l’Espérance et Saint-Dominique). Sa proximité avec l’église favorise une disponibilité pastorale permanente pour les messes, les sacrements, les urgences et l’écoute des fidèles.',
+  'Il comprendra un lieu de prière et cinq (05) chambres autonomes réservées à la vie fraternelle pour l’équipe presbytérale.',
+  'Le coût du projet s’élève à 300 000 000 FCFA, à mobiliser sur 12 mois à partir du 4 octobre 2026.',
+];
 
 const projectSlogan =
   'Ensemble bâtissons la maison de nos pasteurs : un presbytère construit, une mission fortifiée.';
@@ -36,12 +41,20 @@ const projectPriorities = [
 
 const presbyteryPlanImages = [
   {
-    src: presbyteryPlan3dOne,
-    alt: 'Plan 3D du presbytère - vue principale',
+    src: presbyteryNewsOne,
+    alt: 'Vue aérienne du projet de presbytère et de la paroisse',
   },
   {
-    src: presbyteryPlan3dTwo,
-    alt: 'Plan 3D du presbytère - vue secondaire',
+    src: presbyteryNewsTwo,
+    alt: 'Vue principale du futur presbytère',
+  },
+  {
+    src: presbyteryNewsThree,
+    alt: 'Vue latérale du futur presbytère',
+  },
+  {
+    src: presbyteryNewsFour,
+    alt: 'Vue d’ensemble du futur presbytère et de l’église',
   },
 ];
 
@@ -200,7 +213,11 @@ export default function ProjectElements({ onDonate, onSponsor }: ProjectElements
             <h2 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
               Construction du presbytère
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-gray-700">{presbyteryDescription}</p>
+            <div className="mt-5 space-y-4 text-lg leading-relaxed text-gray-700">
+              {presbyteryDescription.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
             <p className="mt-6 rounded-lg border-l-4 border-amber-700 bg-white p-5 text-lg font-semibold text-amber-900 shadow-sm">
               {projectSlogan}
             </p>
@@ -232,7 +249,7 @@ export default function ProjectElements({ onDonate, onSponsor }: ProjectElements
 
       <section className="border-y border-stone-100 bg-stone-50/70 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2">
             {presbyteryPlanImages.map((image) => (
               <figure
                 key={image.src}

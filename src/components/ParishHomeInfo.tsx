@@ -140,7 +140,7 @@ export default function ParishHomeInfo({ onProjects, onSpiritual }: ParishHomeIn
                 <span className="font-semibold">WhatsApp</span>
               </a>
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/share/19xhjMKjjn/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-3 rounded-lg border border-white/80 bg-white/70 px-4 py-4 text-gray-800 shadow-sm backdrop-blur-md transition-colors hover:border-amber-300 hover:bg-white"

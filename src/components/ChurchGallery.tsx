@@ -1,6 +1,6 @@
 import { Camera, MapPin } from 'lucide-react';
 import parishCommunityImage from '../assets/parish-community.jpeg';
-import heroHouseImage from '../assets/hero-house.jpeg';
+import presbyteryNewsOne from '../assets/presbytery-news-1.jpg';
 import parishMassImage from '../assets/parish-mass.jpeg';
 import parishEucharistImage from '../assets/parish-eucharist.jpeg';
 
@@ -16,10 +16,10 @@ export default function ChurchGallery() {
       alt: "Communauté de la Quasi-Paroisse Sacré-Cœur d'Akandjé",
     },
     {
-      title: 'Pasteurs et fidèles',
-      description: 'La mission pastorale se vit dans la proximité.',
-      src: heroHouseImage,
-      alt: "Prêtres et fidèles à Sacré-Cœur d'Akandjé",
+      title: 'Projet presbytère',
+      description: 'Un cadre stable et digne pour la mission pastorale.',
+      src: presbyteryNewsOne,
+      alt: 'Vue aérienne du projet de presbytère et de la paroisse',
     },
     {
       title: 'Célébration eucharistique',

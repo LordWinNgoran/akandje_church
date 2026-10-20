@@ -3,8 +3,10 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import heroWelcomeImage from '../assets/hero-welcome.jpeg';
-import presbyteryPlan3dOne from '../assets/presbytery-plan-3d-1.jpeg';
-import presbyteryPlan3dTwo from '../assets/presbytery-plan-3d-2.jpeg';
+import presbyteryNewsOne from '../assets/presbytery-news-1.jpg';
+import presbyteryNewsTwo from '../assets/presbytery-news-2.jpg';
+import presbyteryNewsThree from '../assets/presbytery-news-3.jpg';
+import presbyteryNewsFour from '../assets/presbytery-news-4.jpg';
 import parishCommunityImage from '../assets/parish-community.jpeg';
 import parishBaptismGroupImage from '../assets/parish-baptism-group.jpeg';
 import 'swiper/css';
@@ -38,8 +40,8 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
       title: 'La maison de nos pasteurs',
       subtitle: flashMessage,
       description: 'La construction du presbytère donnera aux prêtres une résidence stable, digne et proche de la vie paroissiale.',
-      image: presbyteryPlan3dOne,
-      imageAlt: 'Plan 3D du presbytère - première vue',
+      image: presbyteryNewsOne,
+      imageAlt: 'Vue aérienne du projet de presbytère et de la paroisse',
       imagePosition: 'object-center',
     },
     {
@@ -48,8 +50,28 @@ export default function Hero({ onDonate, onProjects }: HeroProps) {
       title: 'La maison de nos pasteurs',
       subtitle: flashMessage,
       description: 'La construction du presbytère donnera aux prêtres une résidence stable, digne et proche de la vie paroissiale.',
-      image: presbyteryPlan3dTwo,
-      imageAlt: 'Plan 3D du presbytère - deuxième vue',
+      image: presbyteryNewsTwo,
+      imageAlt: 'Vue principale du futur presbytère',
+      imagePosition: 'object-center',
+    },
+    {
+      id: 'presbytery-plan-three',
+      eyebrow: 'Projet presbytère',
+      title: 'La maison de nos pasteurs',
+      subtitle: flashMessage,
+      description: 'La construction du presbytère donnera aux prêtres une résidence stable, digne et proche de la vie paroissiale.',
+      image: presbyteryNewsThree,
+      imageAlt: 'Vue latérale du futur presbytère',
+      imagePosition: 'object-center',
+    },
+    {
+      id: 'presbytery-plan-four',
+      eyebrow: 'Projet presbytère',
+      title: 'La maison de nos pasteurs',
+      subtitle: flashMessage,
+      description: 'La construction du presbytère donnera aux prêtres une résidence stable, digne et proche de la vie paroissiale.',
+      image: presbyteryNewsFour,
+      imageAlt: 'Vue d’ensemble du futur presbytère et de l’église',
       imagePosition: 'object-center',
     },
     {

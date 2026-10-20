@@ -40,12 +40,12 @@ export default function TransparencyPage() {
   };
 
   const budgetBreakdown = [
-    { category: 'Fondations et Structure', amount: 200000000, percentage: 40 },
-    { category: 'Toiture et Charpente', amount: 100000000, percentage: 20 },
-    { category: 'Finitions Intérieures', amount: 80000000, percentage: 16 },
-    { category: 'Éléments Liturgiques', amount: 60000000, percentage: 12 },
-    { category: 'Vitraux et Décoration', amount: 40000000, percentage: 8 },
-    { category: 'Aménagements Extérieurs', amount: 20000000, percentage: 4 },
+    { category: 'Fondations et Structure', amount: 120000000, percentage: 40 },
+    { category: 'Toiture et Charpente', amount: 60000000, percentage: 20 },
+    { category: 'Finitions Intérieures', amount: 48000000, percentage: 16 },
+    { category: 'Éléments Liturgiques', amount: 36000000, percentage: 12 },
+    { category: 'Vitraux et Décoration', amount: 24000000, percentage: 8 },
+    { category: 'Aménagements Extérieurs', amount: 12000000, percentage: 4 },
   ];
 
   return (
@@ -133,7 +133,7 @@ export default function TransparencyPage() {
             <div className="flex justify-between items-center">
               <span className="text-xl font-bold text-gray-900">{t('total_budget')}</span>
               <span className="text-3xl font-bold text-amber-800">
-                {formatAmount(500000000)} FCFA
+                {formatAmount(300000000)} FCFA
               </span>
             </div>
           </div>

@@ -1,8 +1,12 @@
-import { Church, Heart, Users, Target } from 'lucide-react';
+import { ArrowRight, Church, Heart, Users, Target } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import aboutHistoryImage from '../assets/about-history.jpeg';
 
-export default function AboutPage() {
+interface AboutPageProps {
+  onPastors: () => void;
+}
+
+export default function AboutPage({ onPastors }: AboutPageProps) {
   const { language } = useLanguage();
 
   const values = [
@@ -80,6 +84,14 @@ export default function AboutPage() {
                 : 'The Sacred Heart Quasi-Parish of Akandjé: A project of faith, excellence and communion'
               }
             </p>
+            <button
+              type="button"
+              onClick={onPastors}
+              className="mt-8 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 font-semibold text-amber-900 shadow-lg transition-colors hover:bg-amber-50"
+            >
+              {language === 'fr' ? 'Nos pasteurs' : 'Our pastors'}
+              <ArrowRight className="h-5 w-5" />
+            </button>
           </div>
         </div>
       </div>
@@ -92,7 +104,7 @@ export default function AboutPage() {
             </h2>
             <div className="prose prose-lg text-gray-600 space-y-4">
               <p>
-                C'est en septembre 2017 que naît la communauté Sacré-Cœur d'Akandjé.
+                C'est en <strong>septembre 2017</strong> que naît la communauté Sacré-Cœur d'Akandjé.
                 Venu bénir le domicile de la famille EKON à la Cité Performer 1, le Père
                 Nicolas ADOPO encourage alors les familles du quartier à se réunir régulièrement.
               </p>
@@ -100,11 +112,11 @@ export default function AboutPage() {
                 Les familles catholiques répondent à cet appel et se rassemblent. Des démarches
                 sont entreprises afin que le site réservé à l'Église Catholique à Akandjé 2 par la
                 communauté villageoise puisse enfin accueillir les célébrations eucharistiques. Ce
-                vœu se réalise le samedi 13 avril 2019, jour de la fête des Rameaux, lorsque les
+                vœu se réalise le samedi <strong>13 avril 2019</strong>, jour de la fête des Rameaux, lorsque les
                 premières célébrations y sont enfin organisées.
               </p>
               <p>
-                Quelques mois plus tard, le 24 novembre 2019, le Père Curé Raphaël Yapo Saint
+                Quelques mois plus tard, le <strong>24 novembre 2019</strong>, le Père Curé Raphaël Yapo Saint
                 proclame solennellement la naissance de la CEB/Chapelle Sacré-Cœur de Jésus
                 d'Akandjé 2, marquant ainsi officiellement la reconnaissance de cette jeune
                 communauté. M. EKON Patrice en est désigné responsable.
@@ -112,19 +124,21 @@ export default function AboutPage() {
               <p>
                 Pour accompagner cet élan, un conseil est mis en place. Sa mission est de favoriser
                 les activités de la communauté, discerner les orientations à prendre, proposer des
-                projets, rester attentif aux préoccupations des fidèles et rendre compte au Curé
-                Rodolphe ETTI.
+                projets, rester attentif aux préoccupations des fidèles et rendre compte au Curé.
+                Après le rappel à DIEU du Père Curé Raphael YAPO SAINT, le Père Curé Rodolphe ETTI
+                en a la charge.
               </p>
               <p>
-                Près de six ans après ses premiers pas, la communauté franchit une nouvelle étape :
-                à la faveur de l'année pastorale 2025-2026, la chapelle Sacré-Cœur est érigée en
-                Quasi-paroisse. Le Révérend Père Arnaud ASSONHON en devient l'administrateur, et
-                la nouvelle Quasi-paroisse est rattachée au Doyenné Père Eugène NEVRY THIE.
+                Six ans après ses premiers pas, la communauté franchit une nouvelle étape : à la
+                faveur de l'année pastorale <strong>2025-2026</strong>, la chapelle Sacré-Cœur devient
+                Quasi-paroisse et est rattachée au Doyenné Père Eugène NEVRY THIE. Le Révérend Père
+                Arnaud ASSONHON est nommé administrateur.
               </p>
               <p>
                 Sous la conduite de son administrateur et avec la grâce de Dieu, la communauté
                 paroissiale s’agrandit, se renforce spirituellement et la Quasi-paroisse se dote
-                progressivement des infrastructures nécessaires à son érection en Paroisse.
+                progressivement des infrastructures nécessaires à son érection en Paroisse de plein
+                exercice.
               </p>
             </div>
           </div>

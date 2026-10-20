@@ -7,7 +7,7 @@ export default function ProgressThermometer() {
   const { t } = useLanguage();
   const [totalRaised, setTotalRaised] = useState(0);
   const [loading, setLoading] = useState(true);
-  const goalAmount = 500000000;
+  const goalAmount = 300000000;
 
   useEffect(() => {
     fetchTotalDonations();

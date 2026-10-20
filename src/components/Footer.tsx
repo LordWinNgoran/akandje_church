@@ -30,7 +30,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/share/19xhjMKjjn/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-lg bg-gray-800 p-2 transition-colors hover:bg-amber-700"
@@ -85,6 +85,14 @@ export default function Footer({ onNavigate }: FooterProps) {
                   className="text-gray-400 transition-colors hover:text-amber-500"
                 >
                   {t('nav_spiritual')}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate('pastors')}
+                  className="text-gray-400 transition-colors hover:text-amber-500"
+                >
+                  {t('nav_pastors')}
                 </button>
               </li>
               <li>
