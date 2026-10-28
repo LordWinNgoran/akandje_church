@@ -32,11 +32,7 @@ const projectPriorities = [
     title: 'Disponibilité pastorale',
     description: 'Une proximité directe avec l’église pour mieux servir les fidèles et la communauté.',
   },
-  /* {
-    icon: ShieldCheck,
-    title: 'Espaces bien séparés',
-    description: 'Des zones publiques pour l’accueil et des espaces privés préservés pour la vie des prêtres.',
-  }, */
+ 
 ];
 
 const presbyteryPlanImages = [
